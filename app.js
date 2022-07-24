@@ -1,8 +1,9 @@
 const express = require('express');
+const app = express();
 const userRoute = require('./api/routes/user');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const app = express();
+
 
 mongoose.connect('mongodb+srv://Madhushudh:madhu123@sbs.tbynzrf.mongodb.net/?retryWrites=true&w=majority');
 mongoose.connection.on('error',err=>{
