@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const userRoute = require('./api/routes/user');
+const schemaRoute = require('./api/routes/schema');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
@@ -16,7 +16,7 @@ mongoose.connection.on('connected',connected=>{
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-app.use('/user',userRoute);
+app.use('/user',schemaRoute);
 app.use((req,res) => {
     res.status(400).json({
         message : 'bad requist'
