@@ -1,5 +1,6 @@
 const http = require('http');
 //const { send } = require('process');
+const port = process.env.PORT || 3000;
 const app = require('./app');
 const server = http.createServer(app);
 
@@ -9,4 +10,4 @@ const server = http.createServer(app);
 // }
 
 
-server.listen(3000,console.log("app is Runing"));
+server.listen(port,console.log("app is Runing"));
