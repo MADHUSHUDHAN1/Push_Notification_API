@@ -7,7 +7,7 @@ router.get('/',(req,res,next)=>{
     User.find()
     .then(result => {
         res.status(200).json({
-            userData: result
+            user: result
         });
     })
     .catch(err=>{
